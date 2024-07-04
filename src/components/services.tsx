@@ -49,7 +49,7 @@ const Services = () => {
               scrollTrigger: {
                 trigger: containerRef.current,
                 start: 'top bottom',
-                toggleActions: 'play none none reset',
+                toggleActions: 'play none none none',
                 // markers: true
               }
             }

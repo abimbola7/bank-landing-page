@@ -20,7 +20,7 @@ const Managers = () => {
         scrollTrigger : {
           trigger : ".managers",
           start : "top 80%",
-          toggleActions : "play none none reset",
+          toggleActions : "play none none none",
           markers : true
         }
       })
@@ -37,7 +37,7 @@ const Managers = () => {
           scrollTrigger : {
             trigger : element,
             start : "top 80%",
-            toggleActions : "play none none reset",
+            toggleActions : "play none none none",
           }
         })
       })

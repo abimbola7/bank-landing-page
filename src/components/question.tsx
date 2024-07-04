@@ -21,7 +21,7 @@ const Question = () => {
           markers : true,
           start : 'top bottom',
           end : 'bottom top',
-          toggleActions: 'play none none reset',
+          toggleActions: 'play none none none',
         }
       })
       gsap.from(".right", {
@@ -32,7 +32,7 @@ const Question = () => {
           markers : true,
           start : 'top bottom',
           end : 'bottom top',
-          toggleActions: 'play none none reset',
+          toggleActions: 'play none none none',
         }
       })
     })

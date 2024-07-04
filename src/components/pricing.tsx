@@ -69,7 +69,7 @@ const Pricing = () => {
           scrollTrigger: {
             trigger: element,
             start: 'top bottom',
-            toggleActions: 'play none none reset',
+            toggleActions: 'play none none none',
             // markers: true
           }
         }
