@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -33,7 +33,7 @@ const Services = () => {
   const serviceRef = useRef(null);
   useGSAP(()=>{
     if (containerRef.current) {
-      const elements = gsap.utils.toArray(".service")
+      const elements = gsap.utils.toArray(".service") as HTMLElement[]
       elements.forEach((element) => {
         gsap.fromTo(
           element,

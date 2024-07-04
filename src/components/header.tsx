@@ -1,9 +1,5 @@
-import React from 'react'
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card"
+
+import { HoverCard, HoverCardContent, HoverCardTrigger } from './ui/hover-card'
 import Nav from './nav'
 
 
@@ -12,7 +8,7 @@ const Header = () => {
     <header className='w-full'>
       <div className='flex items-center justify-between p-3 mx-auto space-x-3 max-w-7xl'>
         <div className="!uppercase cursor-pointer bg-black !text-white py-1 px-4 hover:bg-[#333333] transition-colors duration-200">
-          <HoverCard className="!uppercase">
+          <HoverCard>
             <HoverCardTrigger className="">ONLINE BANKING</HoverCardTrigger>
             <HoverCardContent className="!left-10 bg-black">
               <ul className='!transition-colors !duration-200'>

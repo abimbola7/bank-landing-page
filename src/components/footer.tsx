@@ -1,4 +1,3 @@
-import React from 'react'
 import { IoMailOutline } from "react-icons/io5";
 import { CiInstagram } from "react-icons/ci";
 import { FaTwitter } from "react-icons/fa";

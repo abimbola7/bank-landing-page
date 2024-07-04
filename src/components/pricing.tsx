@@ -1,4 +1,3 @@
-import React from 'react'
 import { IoCheckmarkOutline } from "react-icons/io5";
 
 const pricing = [
@@ -51,7 +50,7 @@ const Pricing = () => {
     <div className='w-full min-h-[90vh] bg-background flex items-center justify-center p-3'>
       <div className='grid items-end justify-center w-full gap-20 mx-auto sm:grid-cols-2 lg:gap-6 lg:grid-cols-4 max-w-7xl justify-items-center'>
         {
-          pricing.map((item, index) => (
+          pricing.map((item) => (
             <div className='w-64'>
               {
                 item.popular && (

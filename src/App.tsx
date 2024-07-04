@@ -8,7 +8,6 @@ import Press from './components/press'
 import Pricing from './components/pricing'
 import Question from './components/question'
 import Services from './components/services'
-import { Button } from './components/ui/button'
 
 
 function App() {

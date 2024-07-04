@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 const Question = () => {
   return (
     <div className='bg-[#434D53] py-20 px-5'>

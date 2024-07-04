@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Advice = () => {
   return (
     <div className='w-full p-3 my-10 bg-white'>
