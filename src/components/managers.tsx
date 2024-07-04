@@ -21,7 +21,7 @@ const Managers = () => {
           trigger : ".managers",
           start : "top 80%",
           toggleActions : "play none none none",
-          markers : true
+          // markers : true
         }
       })
     });

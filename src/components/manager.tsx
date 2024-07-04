@@ -28,22 +28,6 @@ const Manager = ({
   // const mm = gsap.matchMedia()
   const phoneRef = React.useRef<HTMLDivElement>(null);
   const timeline = React.useRef<gsap.core.Timeline | null>(null);
-  
-  // useGSAP(()=> {
-  //   mm.add("(min-width: 800px)", () => {
-  //     gsap.from(".manager", {
-  //       scale : .2,
-  //       opacity : 0,
-  //       duration : 1,
-  //       scrollTrigger : {
-  //         trigger : ".managers",
-  //         start : "top bottom",
-  //         toggleActions : "play none none reset"
-  //       }
-  //     })
-  //   })
-  // })
-
 
   const { contextSafe } = useGSAP(() => {
       timeline.current = gsap.timeline({

@@ -29,38 +29,39 @@ const services = [
 ];
 
 const Services = () => {
-  const mm = gsap.matchMedia()
   const containerRef = useRef(null);
-  const serviceRef = useRef(null);
-  useGSAP(()=>{
+  useGSAP(() => {
+    const mm = gsap.matchMedia();
+
     mm.add("(min-width: 1024px)", () => {
+      console.log('Desktop media query activated');
       if (containerRef.current) {
-        const elements = gsap.utils.toArray(".service") as HTMLElement[]
-        // elements.forEach((element) => {
-          gsap.fromTo(
-            elements,
-            { y: 100, opacity: 0 },
-            {
-              y: 0,
-              opacity: 1,
-              duration: 1,
-              ease: 'power1.out',
-              stagger : .2,
-              scrollTrigger: {
-                trigger: containerRef.current,
-                start: 'top bottom',
-                toggleActions: 'play none none none',
-                // markers: true
-              }
+        const elements = gsap.utils.toArray(".service");
+        gsap.fromTo(
+          elements,
+          { y: 100, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay : 1,
+            ease: 'power1.out',
+            stagger: 0.2,
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: 'top bottom',
+              toggleActions: 'play none none none',
+              // markers: true
             }
-          );
-        // });
+          }
+        );
       }
     });
 
     mm.add("(max-width: 1024px)", () => {
+      console.log('Mobile media query activated');
       if (containerRef.current) {
-        const elements = gsap.utils.toArray(".service") as HTMLElement[]
+        const elements = gsap.utils.toArray(".service") as HTMLElement[];
         elements.forEach((element) => {
           gsap.fromTo(
             element,
@@ -80,14 +81,15 @@ const Services = () => {
           );
         });
       }
-    })
-  })
-
+    });
+  }, {
+    scope : containerRef
+  });
 
   return (
     <div className='grid items-center justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 max-w-[90%] mx-auto gap-y-14 py-12' ref={containerRef}>
       {services.map((service, index) => (
-        <div key={index} className='flex flex-col items-center justify-between p-3 px-6 py-12 space-y-2 text-center border-b-4 border-primary min-h-96 bg-background max-w-64 service' ref={serviceRef}>
+        <div key={index} className='flex flex-col items-center justify-between p-3 px-6 py-12 space-y-2 text-center border-b-4 border-primary min-h-96 bg-background max-w-64 service'>
           <div className='flex flex-col items-center space-x-3'>
             <img src={service.icons} alt={service.title} className='h-12 w-14' />
             <div className='mt-5 space-y-2'>

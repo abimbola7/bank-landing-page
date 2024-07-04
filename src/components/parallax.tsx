@@ -25,7 +25,7 @@ const interest = [
 const Parallax = () => {
   useGSAP(()=>{
     gsap.to(".parallax-image", {
-      yPercent: -40,
+      yPercent: -30,
       ease: "none",
       scrollTrigger: {
         trigger: ".parallax-section",
@@ -52,7 +52,7 @@ const Parallax = () => {
     <div className="container mx-auto mt-20 w-full h-[130vh] sm:h-[80vh] !p-0">
       <div className="relative parallax-section">
         <div className="absolute top-0 left-0 z-50 flex items-center justify-center w-full h-full py-2">
-          <div className='grid items-center justify-center w-full max-w-5xl grid-cols-1 gap-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 justify-items-center lg:interest'>
+          <div className='grid items-center justify-center w-full max-w-5xl grid-cols-1 gap-y-20 sm:gap-y-6 gap-x-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 justify-items-center lg:interest p-3'>
             {
               interest.map((items, index)=>(
                 <div className='relative p-3 w-72 min-h-48'>
@@ -70,7 +70,7 @@ const Parallax = () => {
             }
           </div>
         </div>
-        <img src="https://www.coronationmb.com/wp-content/uploads/sites/3/2020/01/Coronation-Merchant-Bank-Careers.jpg" alt="Parallax Image" className="parallax-image brightness-50" />
+        <img src="https://www.coronationmb.com/wp-content/uploads/sites/3/2020/01/Coronation-Merchant-Bank-Careers.jpg" alt="Parallax Image" className="parallax-image brightness-50 !object-[47%]" />
       </div>
     </div>
   )

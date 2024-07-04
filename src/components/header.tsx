@@ -10,7 +10,7 @@ const Header = () => {
         <div className="!uppercase cursor-pointer bg-black !text-white py-1 px-4 hover:bg-[#333333] transition-colors duration-200">
           <HoverCard>
             <HoverCardTrigger className="">ONLINE BANKING</HoverCardTrigger>
-            <HoverCardContent className="!left-10 bg-black">
+            <HoverCardContent className="!left-10 bg-black !border-none">
               <ul className='!transition-colors !duration-200'>
                 <li className='hover:bg-[#333333] px-3 py-1 !transition-colors !duration-300'>internet banking</li>
                 <li className='hover:bg-[#333333] px-3 py-1 !transition-colors !duration-300'>mobile banking</li>
@@ -21,7 +21,7 @@ const Header = () => {
         </div>
         <Nav />
         <div className="">
-          <h1 className='text-4xl font-bold'>CORONATION</h1>
+          <h1 className='text-2xl font-bold'>CORONATION</h1>
         </div>
       </div>
     </header>

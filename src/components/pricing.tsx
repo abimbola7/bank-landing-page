@@ -64,7 +64,7 @@ const Pricing = () => {
         {
           opacity: 0,
           duration: 1.2,
-          delay: .5,
+          delay: .2,
           ease: 'power1.out',
           scrollTrigger: {
             trigger: element,

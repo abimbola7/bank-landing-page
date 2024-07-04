@@ -18,10 +18,10 @@ const Question = () => {
         duration : 1,
         scrollTrigger : {
           trigger : containerRef.current,
-          markers : true,
+          // markers : true,
           start : 'top bottom',
           end : 'bottom top',
-          toggleActions: 'play none none none',
+          toggleActions: 'play none none reset',
         }
       })
       gsap.from(".right", {
@@ -29,10 +29,10 @@ const Question = () => {
         duration : 1,
         scrollTrigger : {
           trigger : containerRef.current,
-          markers : true,
+          // markers : true,
           start : 'top bottom',
           end : 'bottom top',
-          toggleActions: 'play none none none',
+          toggleActions: 'play none none reset',
         }
       })
     })
