@@ -6,13 +6,17 @@ import { FaTwitter } from "react-icons/fa";
 import { TiSocialFacebook } from "react-icons/ti";
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger)
 
 export interface Managerr {
   index : number;
   name : string;
   profession : string;
   avatar : string;
+  className? : string;
+  managerRef : React.Ref<HTMLDivElement>;
 }
 
 const Manager = ({
@@ -21,9 +25,26 @@ const Manager = ({
   profession,
   avatar
 } : Managerr) => {
+  // const mm = gsap.matchMedia()
   const phoneRef = React.useRef<HTMLDivElement>(null);
   const timeline = React.useRef<gsap.core.Timeline | null>(null);
   
+  // useGSAP(()=> {
+  //   mm.add("(min-width: 800px)", () => {
+  //     gsap.from(".manager", {
+  //       scale : .2,
+  //       opacity : 0,
+  //       duration : 1,
+  //       scrollTrigger : {
+  //         trigger : ".managers",
+  //         start : "top bottom",
+  //         toggleActions : "play none none reset"
+  //       }
+  //     })
+  //   })
+  // })
+
+
   const { contextSafe } = useGSAP(() => {
       timeline.current = gsap.timeline({
         paused: true,
@@ -41,7 +62,7 @@ const Manager = ({
     timeline.current?.reverse()
   })
   return (
-    <div className='flex flex-col items-center justify-center w-64 px-4 py-20 space-y-1 bg-white' key={index}>
+    <div className='flex flex-col items-center justify-center w-64 px-4 py-20 space-y-1 bg-white manage' key={index}>
       <div 
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}

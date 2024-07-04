@@ -1,4 +1,11 @@
 import { IoCheckmarkOutline } from "react-icons/io5";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const pricing = [
   {
@@ -46,12 +53,35 @@ const pricing = [
 ]
 
 const Pricing = () => {
+  const containerRef  =  React.useRef(null)
+  const priceRef  =  React.useRef(null)
+
+  useGSAP(()=>{
+    const elements = gsap.utils.toArray(".pricing") as HTMLElement[]
+    elements.forEach((element) => {
+      gsap.from(
+        element,
+        {
+          opacity: 0,
+          duration: 1.2,
+          delay: .5,
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top bottom',
+            toggleActions: 'play none none reset',
+            // markers: true
+          }
+        }
+      );
+    });
+  })
   return (
-    <div className='w-full min-h-[90vh] bg-background flex items-center justify-center p-3'>
+    <div className='w-full min-h-[90vh] bg-background flex items-center justify-center p-3' ref={containerRef}>
       <div className='grid items-end justify-center w-full gap-20 mx-auto sm:grid-cols-2 lg:gap-6 lg:grid-cols-4 max-w-7xl justify-items-center'>
         {
           pricing.map((item) => (
-            <div className='w-64'>
+            <div className='w-64 pricing' ref={priceRef}>
               {
                 item.popular && (
                   <div className='w-full p-3 font-semibold bg-[#2c3236] text-white flex items-center justify-center relative'>

@@ -29,30 +29,58 @@ const services = [
 ];
 
 const Services = () => {
+  const mm = gsap.matchMedia()
   const containerRef = useRef(null);
   const serviceRef = useRef(null);
   useGSAP(()=>{
-    if (containerRef.current) {
-      const elements = gsap.utils.toArray(".service") as HTMLElement[]
-      elements.forEach((element) => {
-        gsap.fromTo(
-          element,
-          { y: 200, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: 'power1.out',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top bottom',
-              toggleActions: 'play none restart none',
-              // markers: true
+    mm.add("(min-width: 1024px)", () => {
+      if (containerRef.current) {
+        const elements = gsap.utils.toArray(".service") as HTMLElement[]
+        // elements.forEach((element) => {
+          gsap.fromTo(
+            elements,
+            { y: 100, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 1,
+              ease: 'power1.out',
+              stagger : .2,
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: 'top bottom',
+                toggleActions: 'play none none reset',
+                // markers: true
+              }
             }
-          }
-        );
-      });
-    }
+          );
+        // });
+      }
+    });
+
+    mm.add("(max-width: 1024px)", () => {
+      if (containerRef.current) {
+        const elements = gsap.utils.toArray(".service") as HTMLElement[]
+        elements.forEach((element) => {
+          gsap.fromTo(
+            element,
+            { y: 100, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 1,
+              ease: 'power1.out',
+              scrollTrigger: {
+                trigger: element,
+                start: 'top bottom',
+                toggleActions: 'play none restart none',
+                // markers: true
+              }
+            }
+          );
+        });
+      }
+    })
   })
 
 

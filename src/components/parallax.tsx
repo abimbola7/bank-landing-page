@@ -25,7 +25,7 @@ const interest = [
 const Parallax = () => {
   useGSAP(()=>{
     gsap.to(".parallax-image", {
-      yPercent: -50,
+      yPercent: -40,
       ease: "none",
       scrollTrigger: {
         trigger: ".parallax-section",
@@ -34,12 +34,25 @@ const Parallax = () => {
         scrub: 2,
       }
     });
+    
+    gsap.to(".interest", {
+      yPercent : 20,
+      ease : 'none',
+      scrollTrigger : {
+        trigger :  ".parallax-section",
+        start : "top bottom",
+        end : "bottom top",
+        scrub : 2
+      }
+    });
   })
+  // useGSAP(()=>{
+  // })
   return (
     <div className="container mx-auto mt-20 w-full h-[130vh] sm:h-[80vh] !p-0">
       <div className="relative parallax-section">
         <div className="absolute top-0 left-0 z-50 flex items-center justify-center w-full h-full py-2">
-          <div className='grid items-center justify-center w-full max-w-5xl grid-cols-1 gap-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 justify-items-center'>
+          <div className='grid items-center justify-center w-full max-w-5xl grid-cols-1 gap-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 justify-items-center lg:interest'>
             {
               interest.map((items, index)=>(
                 <div className='relative p-3 w-72 min-h-48'>

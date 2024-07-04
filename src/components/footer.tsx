@@ -5,7 +5,7 @@ import { TiSocialFacebook } from "react-icons/ti";
 
 const Footer = () => {
   return (
-    <div className="min-h-screen w-full bg-[#0e1014] text-white py-12 px-6">
+    <div className="min-h-screen w-full bg-[#0e1014] text-[#d7d7d7] py-12 px-6">
       <div className='max-w-7xl mx-auto w-full'>
         <div className='w-full grid sm:grid-cols-2 md:grid-md-3 lg:grid-cols-4 items-start justify-items-start justify-center gap-x-6 gap-y-12 pb-32 border-b'>
           <div className='w-full'>
