@@ -44,13 +44,13 @@ const Services = () => {
             y: 0,
             opacity: 1,
             duration: 1,
-            delay : 1,
+            // delay : 1,
             ease: 'power1.out',
             stagger: 0.2,
             scrollTrigger: {
               trigger: containerRef.current,
               start: 'top bottom',
-              toggleActions: 'play none none none',
+              toggleActions: 'play none none reset',
               // markers: true
             }
           }
@@ -87,19 +87,22 @@ const Services = () => {
   });
 
   return (
-    <div className='grid items-center justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 max-w-[90%] mx-auto gap-y-14 py-12' ref={containerRef}>
-      {services.map((service, index) => (
-        <div key={index} className='flex flex-col items-center justify-between p-3 px-6 py-12 space-y-2 text-center border-b-4 border-primary min-h-96 bg-background max-w-64 service'>
-          <div className='flex flex-col items-center space-x-3'>
-            <img src={service.icons} alt={service.title} className='h-12 w-14' />
-            <div className='mt-5 space-y-2'>
-              <h2 className='text-xl font-semibold'>{service.title}</h2>
-              <p className='text-sm'>{service.description}</p>
+    <div className='mt-10 py-12'>
+      <h1 className="text-center text-2xl md:text-4xl font-semibold">Services Overview</h1>
+      <div className='grid items-center justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 max-w-[90%] mx-auto gap-y-14' ref={containerRef}>
+        {services.map((service, index) => (
+          <div key={index} className='flex flex-col items-center justify-between p-3 px-6 py-12 space-y-2 text-center border-b-4 border-primary min-h-96 bg-background max-w-64 service'>
+            <div className='flex flex-col items-center space-x-3'>
+              <img src={service.icons} alt={service.title} className='h-12 w-14' />
+              <div className='mt-5 space-y-2'>
+                <h2 className='text-xl font-semibold'>{service.title}</h2>
+                <p className='text-sm'>{service.description}</p>
+              </div>
             </div>
+            <button className='px-4 py-2 text-white bg-primary'>Learn More</button>
           </div>
-          <button className='px-4 py-2 text-white bg-primary'>Learn More</button>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

@@ -20,7 +20,7 @@ const Header = () => {
           </HoverCard>
         </div>
         <Nav />
-        <div className="">
+        <div className="cursor-pointer">
           <h1 className='text-2xl font-bold'>CORONATION</h1>
         </div>
       </div>

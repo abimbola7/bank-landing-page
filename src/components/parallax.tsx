@@ -49,7 +49,7 @@ const Parallax = () => {
   // useGSAP(()=>{
   // })
   return (
-    <div className="container mx-auto mt-20 w-full h-[130vh] sm:h-[80vh] !p-0">
+    <div className="container mx-auto w-full h-[130vh] sm:h-[80vh] !p-0">
       <div className="relative parallax-section">
         <div className="absolute top-0 left-0 z-50 flex items-center justify-center w-full h-full py-2">
           <div className='grid items-center justify-center w-full max-w-5xl grid-cols-1 gap-y-20 sm:gap-y-6 gap-x-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 justify-items-center lg:interest p-3'>

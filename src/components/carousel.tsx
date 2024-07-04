@@ -12,6 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Carousel = () => {
   const timeline = React.useRef<gsap.core.Timeline | null>(null);
+  const timeline1  = React.useRef<gsap.core.Timeline | null>(null)
+
   const { contextSafe }   = useGSAP(()=>{
     timeline.current = gsap.timeline({
       paused : true,
@@ -22,6 +24,20 @@ const Carousel = () => {
       borderLeftWidth : "2px",
       borderRightWidth : "2px",
     })
+
+    timeline1.current = gsap.timeline({
+      // paused : true
+    }).from(".sww", {
+      duration : 1,
+      opacity : 0,
+      y : 100,
+      ease : 'power1.out',
+      stagger : .2
+    })
+  })
+
+  const handleClick = contextSafe(() => {
+    timeline1.current?.restart()
   })
 
   const mouseEnter1 = contextSafe(() => {
@@ -49,7 +65,7 @@ const Carousel = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full border h-full flex items-center justify-center">
-            <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col'>
+            <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col sww'>
               <h2 className="text-2xl sm:text-4xl font-semibold">Welcome to our World</h2>
               <p className="text-sm md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -71,7 +87,7 @@ const Carousel = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full border h-full flex items-center justify-center">
-            <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col'>
+            <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col sww'>
               <h2 className="text-2xl sm:text-4xl font-semibold">Special Family Rates</h2>
               <p className="text-sm md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -93,7 +109,7 @@ const Carousel = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full border h-full flex items-center justify-center">
-            <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col'>
+            <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col sww'>
               <h2 className="text-2xl sm:text-4xl font-semibold">Efficient Financing</h2>
               <p className="text-sm md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -111,10 +127,14 @@ const Carousel = () => {
         {/* Repeat for additional slides */}
       </Swiper>
       {/* Custom navigation buttons */}
-      <div className="custom-button-next absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full bg-opacity-50 cursor-pointer z-10 hover:bg-gray-600 group">
+      <div 
+      onClick={handleClick}
+      className="custom-button-next absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full bg-opacity-50 cursor-pointer z-10 hover:bg-gray-600 group">
         <TfiAngleRight size={20} className='text-[#b1b0b0] group-hover:text-white'/>
       </div>
-      <div className="custom-button-prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full cursor-pointer z-10 hover:bg-gray-600 bg-opacity-50 group">
+      <div 
+      onClick={handleClick}
+      className="custom-button-prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full cursor-pointer z-10 hover:bg-gray-600 bg-opacity-50 group">
       <TfiAngleLeft size={20} className='text-[#b1b0b0] group-hover:text-white'/>
       </div>
     </div>
