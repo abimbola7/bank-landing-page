@@ -4,7 +4,7 @@ import { LiaTimesSolid } from "react-icons/lia";
 
 const Sidebar = ({ className, setSheetOpen, sheetOpen } : SheetProps) => {
   return (
-    <div className={`absolute h-screen w-full max-w-xs border bg-white top-0 left-0 z-[1100] ${className} sideebar transition-all duration-300 ${ sheetOpen ? "translate-x-0 opacity-1" : "-translate-x-full opacity-0" }`}>
+    <div className={`fixed h-screen w-full max-w-xs border bg-white top-0 left-0 z-[1100] ${className} sideebar transition-all duration-300 ${ sheetOpen ? "translate-x-0 opacity-1" : "-translate-x-full opacity-0" }`}>
       <div 
       onClick={() => setSheetOpen(prevState=>!prevState)}
       className="absolute top-4 right-3">
