@@ -50,6 +50,9 @@ const Carousel = () => {
   return (
     <div className="carousel-container relative swiper-container">
       <Swiper
+        allowTouchMove={false}
+        noSwiping={true}
+        noSwipingClass='swiper-no-swiping'
         loop={true}
         navigation={{
           nextEl: '.custom-button-next',
@@ -58,7 +61,8 @@ const Carousel = () => {
         modules={[Navigation]}
         className="mySwiper w-full h-[90vh]"
       >
-        <SwiperSlide className="relative">
+        <SwiperSlide 
+        className="relative">
           <img
             src="https://img.freepik.com/free-photo/young-afro-girl-wearing-glasses-looking-happy-texting-with-frien_574295-6163.jpg?t=st=1720113758~exp=1720117358~hmac=1ff5cd56f2ee453489552d61120ffd1d3d1b3f4c6738592b4e5f450f4e90feec&w=900"
             alt="Slide 1"
