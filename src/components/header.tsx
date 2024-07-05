@@ -1,13 +1,13 @@
 
 import { HoverCard, HoverCardContent, HoverCardTrigger } from './ui/hover-card'
 import Nav from './nav'
-
+import { CiMenuFries } from "react-icons/ci";
 
 const Header = () => {
   return (
     <header className='w-full'>
       <div className='flex items-center justify-between p-3 mx-auto space-x-3 max-w-7xl'>
-        <div className="!uppercase cursor-pointer bg-black !text-white py-1 px-4 hover:bg-[#333333] transition-colors duration-200">
+        <div className="!uppercase cursor-pointer bg-black !text-white py-1 px-4 hover:bg-[#333333] transition-colors duration-200 hidden md:block">
           <HoverCard>
             <HoverCardTrigger className="">ONLINE BANKING</HoverCardTrigger>
             <HoverCardContent className="!left-10 bg-black !border-none">
@@ -19,6 +19,7 @@ const Header = () => {
             </HoverCardContent>
           </HoverCard>
         </div>
+        <CiMenuFries size={20} className='cursor-pointer md:hidden'/>
         <Nav />
         <div className="cursor-pointer">
           <h1 className='text-2xl font-bold'>CORONATION</h1>

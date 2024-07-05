@@ -14,22 +14,20 @@ const Question = () => {
   useGSAP(()=>{
     mm.add("(min-width: 768px)", () => {
       gsap.from(".left", {
-        xPercent : -60,
+        xPercent : -30,
         duration : 1,
         scrollTrigger : {
           trigger : containerRef.current,
-          // markers : true,
           start : 'top bottom',
           end : 'bottom top',
           toggleActions: 'play none none reset',
         }
       })
       gsap.from(".right", {
-        xPercent : 60,
+        xPercent : 30,
         duration : 1,
         scrollTrigger : {
           trigger : containerRef.current,
-          // markers : true,
           start : 'top bottom',
           end : 'bottom top',
           toggleActions: 'play none none reset',

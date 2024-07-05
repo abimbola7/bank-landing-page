@@ -81,7 +81,7 @@ const Pricing = () => {
       <div className='grid items-end justify-center w-full gap-20 mx-auto sm:grid-cols-2 lg:gap-6 lg:grid-cols-4 max-w-7xl justify-items-center'>
         {
           pricing.map((item) => (
-            <div className='w-64 pricing' ref={priceRef}>
+            <div className='w-64 pricing h-fit bg-blue-500' ref={priceRef}>
               {
                 item.popular && (
                   <div className='w-full p-3 font-semibold bg-[#2c3236] text-white flex items-center justify-center relative'>
@@ -93,7 +93,7 @@ const Pricing = () => {
               <div className='flex flex-col items-center justify-center bg-[#009CFF] text-white font-semibold py-4 relative border'>
                 <div className='triangle'></div>
                 <p className='text-xl uppercase'>{ item.type }</p>
-                <div className='relative font-normal text-center'>
+                <div className='relative font-normal text-center ml-4'>
                   <p className='absolute top-0 -left-2'>$</p>
                   <span className='text-6xl'>{ item.price }</span>
                   <sub className='text-[.7rem]'>/MO</sub>
