@@ -2,8 +2,9 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from './ui/hover-card'
 import Nav from './nav'
 import { CiMenuFries } from "react-icons/ci";
+import { SetStateAction } from 'react';
 
-const Header = () => {
+const Header = ({ setSheetOpen } : { setSheetOpen : React.Dispatch<SetStateAction<boolean>> }) => {
   return (
     <header className='w-full'>
       <div className='flex items-center justify-between p-3 mx-auto space-x-3 max-w-7xl'>
@@ -19,7 +20,11 @@ const Header = () => {
             </HoverCardContent>
           </HoverCard>
         </div>
-        <CiMenuFries size={20} className='cursor-pointer md:hidden'/>
+        <div 
+        onClick={() => setSheetOpen(prevState=>!prevState)}
+        className=''>
+          <CiMenuFries size={20} className='cursor-pointer md:hidden'/>
+        </div>
         <Nav />
         <div className="cursor-pointer">
           <h1 className='text-2xl font-bold'>CORONATION</h1>

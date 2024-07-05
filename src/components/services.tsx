@@ -34,7 +34,7 @@ const Services = () => {
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 1024px)", () => {
-      console.log('Desktop media query activated');
+      console.log('Desktop media que=ry activated');
       if (containerRef.current) {
         const elements = gsap.utils.toArray(".service");
         gsap.fromTo(

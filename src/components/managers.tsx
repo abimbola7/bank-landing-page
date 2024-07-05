@@ -28,7 +28,6 @@ const Managers = () => {
 
     mm.add("(max-width: 768px)", () => {
       const elements  = gsap.utils.toArray(".manage") as HTMLElement[]
-      console.log(elements)
       elements.forEach((element) => {
         gsap.from(element, {
           scale : .2,

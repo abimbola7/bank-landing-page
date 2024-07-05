@@ -6,7 +6,7 @@ const Nav = () => {
       <li className="navlist">about</li>
       <li className="navlist">services</li>
       <li className="navlist">clients</li>
-      <li className="px-8">team</li>
+      <li className="navlist">team</li>
     </ul>
   )
 }

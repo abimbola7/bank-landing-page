@@ -52,7 +52,7 @@ const Parallax = () => {
     <div className="container mx-auto w-full h-[130vh] sm:h-[80vh] !p-0">
       <div className="relative parallax-section">
         <div className="absolute top-0 left-0 z-50 flex items-center justify-center w-full h-full py-2">
-          <div className='grid items-center justify-center w-full max-w-5xl grid-cols-1 gap-y-20 sm:gap-y-6 gap-x-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 justify-items-center lg:interest p-3'>
+          <div className='grid items-center justify-center w-full max-w-5xl grid-cols-1 gap-y-20 sm:gap-y-6 gap-x-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 justify-items-center lg:interest p-3 mx-3'>
             {
               interest.map((items, index)=>(
                 <div className='relative p-3 w-72 min-h-48'>
@@ -60,7 +60,7 @@ const Parallax = () => {
                   <span className='absolute !top-0 right-0 w-10 h-10 border-t-2 border-r-2'></span>
                   <span className='absolute bottom-0 left-0 w-10 h-10 border-b-2 border-l-2'></span>
                   <span className='absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2'></span>
-                  <span className='text-4xl font-bold'>
+                  <span className='text-4xl font-bold text-[#009CFF]'>
                     0{index + 1}
                   </span>
                   <h1 className='mt-2 text-lg font-semibold text-white '>{items.name}</h1>

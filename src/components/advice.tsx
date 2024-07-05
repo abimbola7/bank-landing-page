@@ -10,8 +10,6 @@ const Advice = () => {
       direction = direction || 1;
       let x = 0
       let y = direction * 100
-  
-      console.log(el.classList.contains("reveal_Right"))
       if (el.classList.contains("reveal_Right")) {
         x = 100;
         y = 0;
