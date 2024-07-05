@@ -64,7 +64,7 @@ const Carousel = () => {
             alt="Slide 1"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full border h-full flex items-center justify-center">
+          <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full h-full flex items-center justify-center">
             <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col sww'>
               <h2 className="text-2xl sm:text-4xl font-semibold">Welcome to our World</h2>
               <p className="text-sm md:text-base">
@@ -86,7 +86,7 @@ const Carousel = () => {
             alt="Slide 2"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full border h-full flex items-center justify-center">
+          <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full h-full flex items-center justify-center">
             <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col sww'>
               <h2 className="text-2xl sm:text-4xl font-semibold">Special Family Rates</h2>
               <p className="text-sm md:text-base">
@@ -108,7 +108,7 @@ const Carousel = () => {
             alt="Slide 3"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full border h-full flex items-center justify-center">
+          <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white slidee z-[10000] w-full h-full flex items-center justify-center">
             <div className='max-w-xs sm:max-w-lg w-full text-center space-y-4 flex items-center flex-col sww'>
               <h2 className="text-2xl sm:text-4xl font-semibold">Efficient Financing</h2>
               <p className="text-sm md:text-base">
